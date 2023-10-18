@@ -27,13 +27,12 @@
                                         </tr>
                                         </thead>
                                         <tbody class="divide-y divide-gray-800">
-                                        <?php foreach ($users as $user): ?>
-                                        <tr>
+                                       @foreach ($users as $user)                                        <tr>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->id; ?></td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->name; ?></td>
                                             <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500"><?= $user->email; ?></td>
                                         </tr>
-                                        <?php endforeach; ?>
+                                       @endforeach
 
                                             <!-- More people... -->
                                         </tbody>
