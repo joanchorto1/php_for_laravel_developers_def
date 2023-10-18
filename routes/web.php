@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\PagesController;
+use App\Http\Controllers\UserController;
 use App\Models\Task;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TaskController;
@@ -17,28 +19,9 @@ use App\Http\Controllers\TaskController;
 
 
 Route::get('/', [TaskController::class, 'index']);
-//    $task1= TaskP::create([
-//        'title' => 'Tasca1',
-//        'description' => 'Realitzar tasca1',
-//        'completed' => 0
-//    ]);
-//    $task2= TaskP::create([
-//        'title' => 'Tasca2',
-//        'description' => 'Realitzar tasca2',
-//        'completed' => 1
-//    ]);
-//    $tasks = [
-//        $task1,
-//        $task2
-//    ];
+Route::get('/tasks', [TaskController::class, 'index']);
+Route::get('/home', [TaskController::class, 'index']);
 
-
-Route::get('/users', function () {
-    return view('users');
-});
-Route::get('/about', function () {
-    return view('about');
-});
-Route::get('/contact', function () {
-    return view('contact');
-});
+Route::get('/users', [UserController::class,'index']) ;
+Route::get('/about', [PagesController::class,'about'] );
+Route::get('/contact', [PagesController::class,'contact']);
