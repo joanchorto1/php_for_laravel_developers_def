@@ -1,7 +1,7 @@
 <x-layout>
     <div class="mx-auto mt-20 max-w-7xl px-6 lg:px-8">
         <div class="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
-            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-gray-300 lg:max-w-none lg:grid-cols-2">
+            <div class="grid max-w-xl grid-cols-1 gap-8 text-base leading-7 text-blue-300 lg:max-w-none lg:grid-cols-2">
                 <div>
                     <p>Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget risus enim. Mattis mauris semper
                         sed amet vitae sed turpis id. Id dolor praesent donec est. Odio penatibus risus viverra
