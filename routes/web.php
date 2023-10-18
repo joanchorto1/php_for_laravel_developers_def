@@ -1,7 +1,8 @@
 <?php
 
-use App\Models\TaskP;
+use App\Models\Task;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/', function () {
+Route::get('/', [TaskController::class, 'index']);
 //    $task1= TaskP::create([
 //        'title' => 'Tasca1',
 //        'description' => 'Realitzar tasca1',
@@ -30,8 +31,7 @@ Route::get('/', function () {
 //        $task1,
 //        $task2
 //    ];
-    return view('tasks',['tasks' => Task::all()]);
-});
+
 
 Route::get('/users', function () {
     return view('users');
