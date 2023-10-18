@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\TaskP;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,25 +16,23 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    $task1= new stdClass();
-    $task1->id=1;
-    $task1->title="Fesd";
-    $task1->description="sdfdafd";
-    $task1->completed=0;
-    $task2= new stdClass();
-    $task2->id=1;
-    $task2->title="Fesd";
-    $task2->description="sdfdafd";
-    $task2->completed=0;
-    $tasks = [
-        $task1,
-        $task2
-    ];
-    return view('tasks',['tasks' => $tasks]);
+//    $task1= TaskP::create([
+//        'title' => 'Tasca1',
+//        'description' => 'Realitzar tasca1',
+//        'completed' => 0
+//    ]);
+//    $task2= TaskP::create([
+//        'title' => 'Tasca2',
+//        'description' => 'Realitzar tasca2',
+//        'completed' => 1
+//    ]);
+//    $tasks = [
+//        $task1,
+//        $task2
+//    ];
+    return view('tasks',['tasks' => Task::all()]);
 });
-Route::get('/tasks', function () {
-    return view('tasks',['tasks' => $tasks]);
-});
+
 Route::get('/users', function () {
     return view('users');
 });
